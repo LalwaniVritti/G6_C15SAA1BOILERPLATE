@@ -5,21 +5,31 @@ var count = 0;
 // Define Gamestate and constants
 
 function preload(){
-  piggyBankImg=loadImage("pbank.png");
   // load images
+  piggyBankImg=loadImage("pbank.png");
+  coinImg=loadImage("coin.png");
+  coin2Img = loadImage("coin2.png");
+  restart = loadImage("goldcoin.png");
 
 }
 function setup() {
   createCanvas(400, 400);
 
-  coin = createSprite(200,100);
-  coin.addImage(coinImg);
-  coin.scale=0.5;
+ 
   
   // create piggy bank sprite, add image and scale it
 
   // create chance sprite, add image, 
   // make its visible property as false and scale it
+  
+  piggyBank = createSprite(200,300,50,20);
+  piggyBank.addImage(piggyBankImg)
+  piggyBank.scale =0.5;
+
+  chance=createSprite(330,100,40,40);
+  chance.addImage(restart);
+  chance.scale=0.1;
+  chance.visible = false;
 
 }
 
